@@ -1,0 +1,14 @@
+{
+  "name": "LAZ Harum Peduli",
+  "short_name": "LAZ Harum",
+  "description": "Aplikasi keuangan LAZ Harum Peduli",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#7a2234",
+  "theme_color": "#7a2234",
+  "icons": [
+    { "src": "ikon-laz-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "ikon-laz-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

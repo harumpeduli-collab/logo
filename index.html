@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAZ Harum Peduli</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="ikon-laz-192.png">
+<link rel="apple-touch-icon" href="ikon-laz-192.png">
+<meta name="theme-color" content="#7a2234">
+<style>
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(150deg,#7a2234,#5a1826 60%,#a02f43);color:#fff;font-family:system-ui,Segoe UI,Roboto,sans-serif;text-align:center;padding:24px}
+img{width:96px;height:96px;border-radius:20px;background:#fff}
+a{color:#fff}
+</style></head><body>
+<img src="ikon-laz-192.png" alt="LAZ Harum Peduli">
+<div><b>LAZ Harum Peduli</b><br><span id="s">Membuka aplikasi...</span></div>
+<a id="l" href="#" style="display:none">Buka aplikasi</a>
+<script>
+var APP_URL = "GANTI_DENGAN_URL_EXEC";
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
+var l = document.getElementById("l"), s = document.getElementById("s");
+if (APP_URL.indexOf("https://script.google.com/") !== 0) {
+  s.textContent = "Alamat aplikasi belum diisi. Ubah APP_URL di index.html.";
+} else {
+  l.href = APP_URL; l.style.display = "inline";
+  setTimeout(function () { location.replace(APP_URL); }, 700);
+}
+</script>
+</body></html>
